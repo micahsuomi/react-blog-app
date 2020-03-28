@@ -3,13 +3,13 @@ import '../assets/style/footer.css';
 
 const footerData = [
     {
-        title: 'Developed by Michele Zucca',
-        link: 'https://michelezuccawebdeveloper.netlify.com/'
+        title: 'Developed at Integrify',
+        link: 'https://www.integrify.io/'
     },
 
     {
-        title: 'My GitHub',
-        link: 'https://github.com/micahsuomi'
+        title: 'GitHub Repo',
+        link: 'https://github.com/micahsuomi/react-blog-app'
     }
 ]
 
