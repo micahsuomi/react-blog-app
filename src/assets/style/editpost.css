@@ -35,3 +35,10 @@ textarea {
     border: none;
     line-height: 1.8;
 }
+
+@media screen and (max-width: 500px) {
+    .edit-form {
+        width: 23rem;
+    }
+
+}

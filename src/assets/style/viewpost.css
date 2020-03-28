@@ -123,3 +123,50 @@ button {
     transform: translateY(-.1rem);
 
 }
+
+@media screen and (max-width: 768px) {
+    .viewpost-wrapper {
+        padding: 5rem 4rem;
+        min-height: 100vw;
+  
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    h3 {
+        margin: .7rem;
+    }
+    .viewpost-container, 
+    .viewpost-body {
+        width: 22rem;
+    
+    }
+
+    .viewpost-header {
+        padding: 1rem 1rem;
+    }
+
+    .viewpost-description {
+        line-height: 1.1;
+    }
+
+    .buttons-wrapper {
+        margin-top: 0;
+    }
+
+    .btn-edit, .btn-delete {
+        padding: .7rem;
+        border: none;
+        border-radius: 3px;
+        color: white;
+        cursor: pointer;
+        margin: 1.2rem;
+        font-family: 'Montserrat';
+        margin: .6rem;
+        width: 6rem;
+    }
+}

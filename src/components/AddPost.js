@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../assets/style/form.css';
+import '../assets/style/addpost.css';
 import { v4 as uuidv4 } from 'uuid';
 import {NavLink} from 'react-router-dom';
 import validator from 'validator';
@@ -97,7 +97,7 @@ class AddPost extends Component {
                      <select name="category" value={category} 
                      onChange={this.handleChange}
                      required={true}>
-                        <option value=''>----Select Category</option>
+                        <option value=''>---Select Category</option>
                         <option value='Work'>Work</option>
                         <option value='Entertainment'>Entertainment</option>
                         <option value='Travel'>Travel</option>

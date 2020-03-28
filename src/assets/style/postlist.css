@@ -11,7 +11,7 @@
 
 .sub-header {
     color: white;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .posts-container {
@@ -28,8 +28,8 @@
 }
 
 .add-post-link {
+    color: rgb(238, 218, 218);
     padding: 1rem;
-    color: var(--yellow);
     text-decoration: none;
     font-family: 'Montserrat';
     border-radius: 3px;
@@ -46,7 +46,7 @@
 }
 
 .add-post-link:hover {
-    color: rgb(238, 218, 218);
+    color: var(--yellow);
     transform: translateY(-.1rem);
 
 }
@@ -71,6 +71,10 @@
         padding: 0;
     }
 
+    .posts-container {
+        padding: 3rem 2rem;
+    }
+
     .posts-wrapper {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -79,7 +83,7 @@
 @media screen and (max-width: 768px) {
   
     .posts-container {
-        padding: 2rem 3rem;
+        padding: 2rem 2rem;
     }
 
     .posts-wrapper {
@@ -89,6 +93,15 @@
 }
 
 @media screen and (max-width: 500px) {
+    .blog-header__container {
+        padding: 3rem 4rem;
+
+    }
+
+    .sub-header {
+        margin-top: 1.3rem;
+    }
+
     .posts-wrapper {
         grid-template-columns: 1fr;
     }

@@ -59,7 +59,7 @@ textarea {
 .btn-save,
 .btn-cancel {
     padding: 1.2rem;
-    background-color: lightskyblue;
+    background-color: rgb(38, 140, 180);
     border: none;
     border-radius: 3px;
     color: white;
@@ -75,7 +75,7 @@ textarea {
 }
 
 .btn-cancel {
-    background-color: rgb(250, 135, 135);
+    background-color: rgb(199, 73, 73);
     text-decoration: none;
 
 }
@@ -89,5 +89,43 @@ textarea {
     background-color: rgb(177, 43, 43);
     transform: translateY(-.1rem);
 
+
+}
+
+@media screen and (max-width: 500px) {
+    label {
+        display: none;
+    }
+    .add-post__container {
+        padding: 6rem 2rem;
+        min-height: 100vh;
+        
+    }
+
+    .form {
+        width: 23rem;
+        height: 30rem;
+    }
+
+    input {
+        width: 11rem;
+        padding: .7rem;
+
+    }
+    select {
+        width: 8rem;
+        padding: .8rem;
+    }
+
+    textarea {
+        width: 20rem;
+    }
+
+    .btn-save, .btn-cancel {
+        padding: .6rem;
+        margin: .6rem;
+        width: 4rem;
+        font-size: 14px;
+    }
 
 }

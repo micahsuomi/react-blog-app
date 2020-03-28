@@ -1,6 +1,6 @@
 import {NavLink} from 'react-router-dom';
 import React, { Component } from 'react'
-import '../assets/style/form.css';
+import '../assets/style/addpost.css';
 import '../assets/style/editpost.css';
 import validator from 'validator';
 

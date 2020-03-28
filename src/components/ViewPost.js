@@ -57,6 +57,7 @@ const ViewPost = (props) => {
                 <h3>Category: {filteredPosts[0].category}</h3>
                 </div>
                 </div>
+
                 <div className="viewpost-body">
                 <p className="viewpost-description">Category: {filteredPosts[0].description}</p>
             <div className="buttons-wrapper">
@@ -70,6 +71,7 @@ const ViewPost = (props) => {
                     Delete</button>
                     </NavLink>
                     </div>
+
 
             </div>
             </div>

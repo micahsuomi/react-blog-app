@@ -23,6 +23,11 @@ class App extends Component {
 
   }
 
+  searchResult = (filteredPosts) => {
+    console.log('connected')
+
+  }
+
   addPost = (newPost) => {
     this.setState({posts: [newPost, ...this.state.posts]})
     console.log(newPost)
@@ -82,7 +87,8 @@ class App extends Component {
             editPost={this.editPost}/>}/>
 
             <Route path="/" component={()=><PostList 
-            posts={this.state.posts}/>} />
+            posts={this.state.posts}
+            seachResult={this.searchResult}/>} />
             </Switch>
 
       </div>
