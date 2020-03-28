@@ -14,10 +14,12 @@ const DeletePost = (props) => {
             <div className="buttons-wrapper">
                 <NavLink to ='/' className="delete-link">
                 <button id={id} 
-                onClick={props.deletePost} className="btn-delete">
+                onClick={props.deletePost} 
+                className="btn-delete">
                     Delete</button>
                     </NavLink>
-                    <NavLink to ={`/viewpost/${id}`}>
+                    <NavLink to ={`/viewpost/${id}`}
+                    className="delete-link">
                         <button className="btn-cancel delete-cancel">Cancel</button>
                         </NavLink>
               

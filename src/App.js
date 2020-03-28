@@ -23,10 +23,12 @@ class App extends Component {
 
   }
 
-  searchResult = (filteredPosts) => {
+  searchResult = () => {
     console.log('connected')
 
   }
+
+ 
 
   addPost = (newPost) => {
     this.setState({posts: [newPost, ...this.state.posts]})

@@ -55,7 +55,7 @@ class EditPost extends Component {
         }
             if(
                 this.state.touched.title &&
-                !validator.isLength(this.state.post.title, {min: 3, max: 20})
+                !validator.isLength(this.state.post.title, {min: 3, max: 30})
               )  {
                 errors.title = 'Title must be between 3 and 20 characters';
                 console.log(errors.title)
@@ -87,15 +87,19 @@ class EditPost extends Component {
             <form onSubmit={this.handleSubmit} className="edit-form">
             <div className="inputs-wrapper">
             <input type="text" 
+            className="edit-input"
             name="title" 
             value={title}
             onChange={this.handleChange}
             onBlur={this.handleBlur}
             required={true}/>
 
-            <select name="category" value={category} 
+            <select 
+            name="category" 
+            value={category} 
             onChange={this.handleChange}
-            required={true}>
+            required={true}
+            className="edit-input">
                 <option value=''>----Select Category</option>
                 <option value='Work'>Work</option>
                     <option value='Entertainment'>Entertainment</option>

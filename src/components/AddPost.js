@@ -58,7 +58,7 @@ class AddPost extends Component {
         }
             if(
                 this.state.touched.title &&
-                !validator.isLength(this.state.post.title, {min: 3, max: 20})
+                !validator.isLength(this.state.post.title, {min: 3, max: 30})
               )  {
                 errors.title = 'Title must be between 3 and 20 characters';
                 console.log(errors.title)
@@ -83,7 +83,6 @@ class AddPost extends Component {
                 <form className="form" onSubmit={this.handleSubmit}>
                     <div className="input-topics">
                     <label className="title-category">Title</label>
-
                     <div>
                     <input type="text" name="title"
                     value={title} placeholder="title" 
@@ -92,7 +91,8 @@ class AddPost extends Component {
                     required={true}/>
                     {errors.title ? <Feedback error={errors.title} /> : ''}
                     </div>
-                    <div>
+
+                    <div className="input-topics">
                     <label className="title-category">Category</label>
                      <select name="category" value={category} 
                      onChange={this.handleChange}

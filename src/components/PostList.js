@@ -11,10 +11,9 @@ const PostList = (props) => {
     <PostItem key={post.id} post={post} />
   ))
 
-  const filterResults = (newPosts) => {
-    let filteredPosts = newPosts
-    props.searchResult(filteredPosts)
-
+  const filterResult = (newPosts) => {
+    console.log(props.posts, newPosts)
+    
 
   }
 
@@ -28,7 +27,9 @@ const PostList = (props) => {
               </div>
               </div>
               <div className="posts-container">
-                {/* <SearchForm filterResult={filterResults}/> */}
+
+                
+                {/* <SearchForm filterResult={filterResult} />  */}
               <NavLink to='/addpost' 
               className="add-post-link">
                 <i className="fas fa-plus-circle fa-2x"></i> 

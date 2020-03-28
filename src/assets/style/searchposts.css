@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-input {
+.search-input {
     width: 30rem;
     border-radius: 5px;
     border: 1px solid skyblue;

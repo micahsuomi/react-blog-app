@@ -19,14 +19,12 @@ export class SearchPosts extends Component {
         let newPostsArr = []
 
  
-        
         for(const posts of this.state.posts) {
             let {id, title, category} = posts;
 
             if(title.toLowerCase().match(this.state.search)) {
                 newPostsArr.push({id, title, category})
-                // console.log(this.state.filteredPosts)
-                // this.setState({posts: this.state.filteredPosts})
+                
                 this.state.filteredPosts.push(newPostsArr)
                 let newPosts = this.state.filteredPosts
                 console.log(newPosts)
@@ -53,6 +51,7 @@ export class SearchPosts extends Component {
                 <div className="search-container">
                   <input type="text"
                   name="post"
+                  className="search-input"
                   value={this.state.text}
                   placeholder="search posts by title or category" 
                   onChange={this.handleChange}/>

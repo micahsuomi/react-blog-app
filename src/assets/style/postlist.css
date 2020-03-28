@@ -98,6 +98,10 @@
 
     }
 
+    .posts-container {
+        padding: 1rem .5rem;
+    }
+
     .sub-header {
         margin-top: 1.3rem;
     }
