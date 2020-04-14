@@ -4,7 +4,7 @@ import '../assets/style/postitem.css'
 
 
 const PostItem = (props) => {
-    let {id, title, category} = props.post
+    let {id, title, category, image} = props.post
 
     let postStyles = [
         {backgroundColor: 'var(--blue)'},
@@ -80,6 +80,7 @@ const PostItem = (props) => {
                 </span>          
                      </NavLink>
                 </div>
+                <img src={image} alt="post pic" className="post-image__small"/>
                 <h3 className="post-title" style={fontStyles}>{title}</h3>
                 <div className="category-wrapper" style={postStyles}>
                 <h3 className="post-category">{category}</h3>

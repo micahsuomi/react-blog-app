@@ -14,7 +14,8 @@ class AddPost extends Component {
                 {
                     title: '',
                     category: '',
-                    description: ''
+                    description: '',
+                    image: ''
                 },
                 touched: {
                     title: false,
@@ -116,6 +117,12 @@ class AddPost extends Component {
                     onBlur={this.handleBlur} 
                     required={true}/>
                     {errors.description ? <Feedback error={errors.description} /> : ''}
+
+                    <label>Insert Image Link</label>
+                    <input type="text" 
+                    name="image"
+                    placeholder="insert image link" 
+                    onChange={this.handleChange}/>
 
                     <div className="buttons-wrapper">
                     <button onClick={this.addPost} className="btn-save">Save</button>

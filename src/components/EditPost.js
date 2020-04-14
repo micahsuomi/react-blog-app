@@ -15,7 +15,8 @@ class EditPost extends Component {
                 post: {
                    title: '',
                    category: '',
-                   description: ''
+                   description: '',
+                   image: ''
                  },
                  touched: {
                     title: false,
@@ -79,7 +80,7 @@ class EditPost extends Component {
     }
     render() {
         
-        let {title, category, description} = this.state.post;
+        let {title, category, description, image} = this.state.post;
         const errors = this.validate();
 
         return (
@@ -118,6 +119,13 @@ class EditPost extends Component {
             onBlur={this.handleBlur} 
             required={true}/>
             {errors.description ? <Feedback error={errors.description} /> : ''}
+
+            <label>Insert Image Link</label>
+            <input type="text" 
+            name="image"
+            value={image}
+            placeholder="insert image link" 
+            onChange={this.handleChange}/>
 
 
             <div className="buttons-wrapper">

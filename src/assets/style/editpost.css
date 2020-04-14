@@ -1,10 +1,11 @@
 .edit-post__container {
-    background-color: rgb(43, 37, 37);
-    padding: 3rem 7rem;
+    padding: 8rem 7rem;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(243, 237, 237);
+
 }
 
 .edit-form {

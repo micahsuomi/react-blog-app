@@ -15,21 +15,21 @@ const ViewPost = (props) => {
     ]
     
    
-    const filteredPosts = posts.filter((post) => {
+    const filteredPosts = posts.find((post) => {
         return post.id === id
     })
 
     
     let index = 0;
-    if(filteredPosts[0].category.toLowerCase().includes('work')) {
+    if(filteredPosts.category.toLowerCase().includes('work')) {
         postStyles = postStyles[index];
-    } else if(filteredPosts[0].category.toLowerCase().includes('entertainment')) {
+    } else if(filteredPosts.category.toLowerCase().includes('entertainment')) {
         index = index +1
         postStyles = postStyles[index]
-    } else if(filteredPosts[0].category.toLowerCase().includes('travel')) {
+    } else if(filteredPosts.category.toLowerCase().includes('travel')) {
         index = index +2
         postStyles = postStyles[index];
-    }    else if(filteredPosts[0].category.toLowerCase().includes('sport')) {
+    }    else if(filteredPosts.category.toLowerCase().includes('sport')) {
         index = index +3
         postStyles = postStyles[index]
     } else {
@@ -53,13 +53,14 @@ const ViewPost = (props) => {
                     </NavLink>
             </div>
             <div className="header-container">
-            <h3>Title: {filteredPosts[0].title}</h3>
-                <h3>Category: {filteredPosts[0].category}</h3>
+            <h3>Title: {filteredPosts.title}</h3>
+                <h3>Category: {filteredPosts.category}</h3>
                 </div>
                 </div>
 
                 <div className="viewpost-body">
-                <p className="viewpost-description">Category: {filteredPosts[0].description}</p>
+                <img src={filteredPosts.image} className="post-image__big" alt="post pic"/>
+                <p className="viewpost-description">Category: {filteredPosts.description}</p>
             <div className="buttons-wrapper">
             <NavLink to={`/editpost/${id}`}> 
             <button id={id} className="btn-edit"> 

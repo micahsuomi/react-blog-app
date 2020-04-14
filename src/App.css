@@ -6,6 +6,9 @@
 }
 
 :root {
+  --primary: #ff5858;
+  --primary-dark: #bb2e2e;
+  --secondary: #f09819;
   --blue: rgba(112, 131, 241, 0.7);
   --yellow: rgba(206, 203, 14, 0.7);
   --green: rgba(30, 209, 149, 0.7);
