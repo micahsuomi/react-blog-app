@@ -4,7 +4,7 @@ import '../assets/style/postitem.css'
 
 
 const PostItem = (props) => {
-    let {id, title, category, image} = props.post
+    let {id, title, category, image, description} = props.post
 
     let postStyles = [
         {backgroundColor: 'var(--blue)'},
@@ -86,6 +86,8 @@ const PostItem = (props) => {
                 <h3 className="post-category">{category}</h3>
                 <i className={iconStyles}></i>
                 </div>
+                <p className="post-description">{description.substring(0,150)}...</p>
+
                 
             </div>
             </div>

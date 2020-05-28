@@ -3,8 +3,8 @@ import '../assets/style/footer.css';
 
 const footerData = [
     {
-        title: 'Developed at Integrify',
-        link: 'https://www.integrify.io/'
+        title: 'Developed by Michele Zucca',
+        link: 'https://michelezuccawebdeveloper.netlify.app/'
     },
 
     {
