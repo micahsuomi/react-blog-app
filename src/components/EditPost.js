@@ -1,7 +1,6 @@
 import {NavLink} from 'react-router-dom';
 import React, { Component } from 'react'
 import '../assets/style/addpost.css';
-import '../assets/style/editpost.css';
 import validator from 'validator';
 
 const Feedback = props => <p style={{color: 'red'}}>{props.error}</p>
@@ -84,9 +83,12 @@ class EditPost extends Component {
         const errors = this.validate();
 
         return (
-            <div className="edit-post__container">
-            <form onSubmit={this.handleSubmit} className="edit-form">
-            <div className="inputs-wrapper">
+            <div className="add-post__container">
+            <form onSubmit={this.handleSubmit} className="form">
+            <h4>Edit Post</h4>
+
+            <div className="input-topics">
+            <label className="title-category">Title</label>
             <input type="text" 
             className="edit-input"
             name="title" 
@@ -95,6 +97,7 @@ class EditPost extends Component {
             onBlur={this.handleBlur}
             required={true}/>
 
+            <label className="title-category">Category</label>
             <select 
             name="category" 
             value={category} 
@@ -111,6 +114,12 @@ class EditPost extends Component {
             </div>
             {errors.title ? <Feedback error={errors.title} /> : ''}
 
+            <label>Insert Image Link</label>
+            <input type="text" 
+            name="image"
+            value={image}
+            placeholder="insert image link" 
+            onChange={this.handleChange}/>
 
             <textarea type="text" 
             name="description" 
@@ -119,14 +128,6 @@ class EditPost extends Component {
             onBlur={this.handleBlur} 
             required={true}/>
             {errors.description ? <Feedback error={errors.description} /> : ''}
-
-            <label>Insert Image Link</label>
-            <input type="text" 
-            name="image"
-            value={image}
-            placeholder="insert image link" 
-            onChange={this.handleChange}/>
-
 
             <div className="buttons-wrapper">
             <button className="btn-save">Save</button>

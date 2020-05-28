@@ -82,6 +82,7 @@ class AddPost extends Component {
         return (
             <div className="add-post__container">
                 <form className="form" onSubmit={this.handleSubmit}>
+                    <h4>New Post</h4>
                     <div className="input-topics">
                     <label className="title-category">Title</label>
                     <div>
@@ -108,6 +109,12 @@ class AddPost extends Component {
                     </div>
                     </div>
                     
+                    <label>Insert Image Link</label>
+                    <input type="text" 
+                    name="image"
+                    placeholder="insert image link" 
+                    onChange={this.handleChange}/>
+                    
                     <label>Write a New Post</label>
                     <textarea type="text" 
                     name="description"
@@ -117,12 +124,6 @@ class AddPost extends Component {
                     onBlur={this.handleBlur} 
                     required={true}/>
                     {errors.description ? <Feedback error={errors.description} /> : ''}
-
-                    <label>Insert Image Link</label>
-                    <input type="text" 
-                    name="image"
-                    placeholder="insert image link" 
-                    onChange={this.handleChange}/>
 
                     <div className="buttons-wrapper">
                     <button onClick={this.addPost} className="btn-save">Save</button>
