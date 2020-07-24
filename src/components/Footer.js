@@ -3,8 +3,7 @@ import '../assets/style/footer.css';
 
 const footerData = [
     {
-        title: 'Developed by Michele Zucca',
-        link: 'https://michelezuccawebdeveloper.netlify.app/'
+        title: 'Developed by Michele Zucca, Mostafizur Rahman, David Hauser, Denis Austin',
     },
 
     {
